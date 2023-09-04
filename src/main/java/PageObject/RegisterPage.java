@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
+
 
 public class RegisterPage {
     public static WebDriver driver;
@@ -32,6 +32,23 @@ public class RegisterPage {
     private WebElement registerButton;
     @FindBy(xpath = "//div[@class='result']")
     private static WebElement verifyRegister;
+    @FindBy(xpath = "//li[.='The specified email already exists']")
+    private static WebElement verifyRegisteredEmail;
+    @FindBy(xpath = "//span[@class='field-validation-error']/span[.='Wrong email']")
+    private static WebElement verifyInvalidEmail;
+    @FindBy(xpath = "//h1[.='Register']")
+    private static WebElement verifyStayAtRegister;
+    @FindBy(xpath = "//div[@class='page-body']//span[@class='field-validation-error']/span[.='First name is required.']")
+    private static WebElement verifyFirstnameRequired;
+    @FindBy(xpath = "//div[@class='page-body']//span[@class='field-validation-error']/span[.='Last name is required.']")
+    private static WebElement verifyLastnameRequired;
+    @FindBy(xpath = "//div[@class='page-body']//span[@class='field-validation-error']/span[.='Email is required.']")
+    private static WebElement verifyEmailRequired;
+    @FindBy(xpath = "//div[@class='page-body']//div[2]/span[@class='field-validation-error']")
+    private static WebElement verifyPasswordRequired;
+    @FindBy(xpath = "//div[@class='page-body']//span[@class='field-validation-error']/span[.='The password should have at least 6 characters.']")
+    private static WebElement verifyPasswordMinimum;
+
 
     public static boolean verifyLandingPage(){
         return verifyLandingPage.isDisplayed();
@@ -63,6 +80,32 @@ public class RegisterPage {
     public static boolean verifyRegister(){
         return verifyRegister.isDisplayed();
     }
+    public static boolean verifyRegisteredEmail(){
+        return verifyRegisteredEmail.isDisplayed();
+    }
+    public static boolean verifyInvalidEmail(){
+        return verifyInvalidEmail.isDisplayed();
+    }
+    public static boolean verifyStayAtRegister(){
+        return verifyStayAtRegister.isDisplayed();
+    }
+    public static boolean verifyFirstnameRequired(){
+        return verifyFirstnameRequired.isDisplayed();
+    }
+    public static boolean verifyLastnameRequired(){
+        return verifyLastnameRequired.isDisplayed();
+    }
+    public static boolean verifyEmailRequired(){
+        return verifyEmailRequired.isDisplayed();
+    }
+    public static boolean verifyPasswordRequired(){
+        return verifyPasswordRequired.isDisplayed();
+    }
+    public static boolean verifyPasswordMinimum(){
+        return verifyPasswordMinimum.isDisplayed();
+    }
+
+
 
 
 

@@ -34,7 +34,7 @@ public class RegisterSteps {
         webDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
     }
 
-    @And("User click gender and input {string} as Firstname, input {string} as Lastname, input {string} as email")
+    @And("User click male gender and input {string} as Firstname, input {string} as Lastname, input {string} as email")
     public void userClickGenderAndInputAsFirstnameInputAsLastnameInputAsEmail(String Name, String lastName, String registerEmail) {
         RegisterPage registerPage = new RegisterPage(webDriver);
         registerPage.clickGenderSelect();
@@ -65,6 +65,54 @@ public class RegisterSteps {
     public void userWilSeeRegistrationCompleted() {
         RegisterPage registerPage = new RegisterPage(webDriver);
         Assert.assertTrue(RegisterPage.verifyRegister());
+        webDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+    }
+
+    @Then("User wil see message the specified email already exists")
+    public void userWilSeeMessageTheSpecifiedEmailAlreadyExists() {
+        Assert.assertTrue(RegisterPage.verifyRegisteredEmail());
+        webDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+    }
+
+    @Then("User wil see error message")
+    public void userWilSeeMessageWrongEmail() {
+        Assert.assertTrue(RegisterPage.verifyInvalidEmail());
+        webDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+    }
+
+    @And("User will stay at register page")
+    public void userWillStayAtRegisterPage() {
+        Assert.assertTrue(RegisterPage.verifyStayAtRegister());
+        webDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+    }
+
+    @Then("User wil see error message First name is required")
+    public void userWilSeeErrorMessageFirstNameIsRequired() {
+        Assert.assertTrue(RegisterPage.verifyFirstnameRequired());
+        webDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+    }
+
+    @Then("User wil see error message Last name is required")
+    public void userWilSeeErrorMessageLastNameIsRequired() {
+        Assert.assertTrue(RegisterPage.verifyLastnameRequired());
+        webDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+    }
+
+    @Then("User wil see error message Email is required")
+    public void userWilSeeErrorMessageEmailIsRequired() {
+        Assert.assertTrue(RegisterPage.verifyEmailRequired());
+        webDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+    }
+
+    @Then("User wil see error message Password is required")
+    public void userWilSeeErrorMessagePasswordIsRequired() {
+        Assert.assertTrue(RegisterPage.verifyPasswordRequired());
+        webDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+    }
+
+    @Then("User wil see error message The password should have at least {int} characters.")
+    public void userWilSeeErrorMessageThePasswordShouldHaveAtLeastCharacters(int arg0) {
+        Assert.assertTrue(RegisterPage.verifyPasswordMinimum());
         webDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
     }
 }
