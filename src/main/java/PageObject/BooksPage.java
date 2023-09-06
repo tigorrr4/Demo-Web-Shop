@@ -34,6 +34,7 @@ public class BooksPage {
         sortBy.click();
         a.selectByVisibleText(sort);
     }
+
     public void setDisplaySort(String display){
         Select a = new Select(displaySort);
         displaySort.click();
