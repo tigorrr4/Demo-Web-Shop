@@ -11,7 +11,7 @@
 
 
 ## 📓 Testing Documentation
-[Test Case WEB](https://docs.google.com/spreadsheets/d/1ltUOgSY3iZRbdzCPh6dDNew98Kjd_gqVlpgnl1WTtAA/edit#gid=0)
+[Test Case](https://docs.google.com/spreadsheets/d/1ltUOgSY3iZRbdzCPh6dDNew98Kjd_gqVlpgnl1WTtAA/edit#gid=0)
 
 ## 📝 Reports
 
