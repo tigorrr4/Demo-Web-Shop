@@ -1,6 +1,7 @@
 package step_definitions;
 
 import PageObject.BooksPage;
+import PageObject.LoginPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -20,6 +21,12 @@ public class BooksSteps {
 
     @Given("User already login")
     public void userAlreadyLogin() {
+        LoginPage loginPage = new LoginPage(webDriver);
+        loginPage.LoginMenuPage();
+        loginPage.setEmailField("tigorthorir@gmail.com");
+        loginPage.setPasswordField("tigor123");
+        loginPage.loginButton();
+        webDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
     }
 
     @When("User click books on menu")
