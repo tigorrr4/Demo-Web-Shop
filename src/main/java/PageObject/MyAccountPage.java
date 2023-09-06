@@ -33,6 +33,29 @@ public class MyAccountPage {
     private  WebElement newPasswordField;
     @FindBy(xpath = "//input[@id='ConfirmNewPassword']")
     private  WebElement confirmPasswordField;
+    @FindBy(xpath = "//input[@class='button-2 edit-address-button']")
+    private  WebElement addressesButton;
+    @FindBy(xpath = "//ul[@class='list']//a[.='Addresses']")
+    private  WebElement EditAddressesButton;
+    @FindBy(xpath = "//input[@id='Address_FirstName']")
+    private  WebElement setAddressesFieldFirstname;
+    @FindBy(xpath = "//input[@id='Address_LastName']")
+    private  WebElement setAddressesFieldLastname;
+    @FindBy(xpath = "//input[@id='Address_Email']")
+    private  WebElement setAddressesEmail;
+    @FindBy(xpath = "//input[@id='Address_Company']")
+    private  WebElement setAddressesCompany;
+    @FindBy(xpath = "//input[@id='Address_City']")
+    private  WebElement setAddressesCity;
+    @FindBy(xpath = "//div[8]/input[@class='text-box single-line']")
+    private  WebElement setAddresses;
+    @FindBy(xpath = "//input[@id='Address_ZipPostalCode']")
+    private  WebElement setZipCode;
+    @FindBy(xpath = "//input[@id='Address_PhoneNumber']")
+    private  WebElement setPhoneNumber;
+    @FindBy(xpath = "//input[@class='button-1 save-address-button']")
+    private  WebElement saveButtonAddress;
+
 
 
     public void clickProfileButton(){
@@ -67,5 +90,46 @@ public class MyAccountPage {
     }
     public void setConfirmPasswordField(String confirmPassword) {
         confirmPasswordField.sendKeys(confirmPassword);
+    }
+    public void clickAddressesButton(){
+        addressesButton.click();
+    }
+    public void clickEditAddressesButton(){
+        EditAddressesButton.click();
+    }
+    public void setAddressesFieldFirstname(String addFirstName) {
+        setAddressesFieldFirstname.clear();
+        setAddressesFieldFirstname.sendKeys(addFirstName);
+    }
+    public void setAddressesFieldLastname(String addLastName) {
+        setAddressesFieldLastname.clear();
+        setAddressesFieldLastname.sendKeys(addLastName);
+    }
+    public void setAddressesEmail(String addEmail) {
+        setAddressesEmail.clear();
+        setAddressesEmail.sendKeys(addEmail);
+    }
+    public void setAddressesCompany(String company) {
+        setAddressesCompany.clear();
+        setAddressesCompany.sendKeys(company);
+    }
+    public void setAddressesCity(String city) {
+        setAddressesCity.clear();
+        setAddressesCity.sendKeys(city);
+    }
+    public void setAddresses(String Addresses) {
+        setAddresses.clear();
+        setAddresses.sendKeys(Addresses);
+    }
+    public void setZipCodes(String zipCode) {
+        setZipCode.clear();
+        setZipCode.sendKeys(zipCode);
+    }
+    public void setPhoneNumber(String phoneNumber) {
+        setPhoneNumber.clear();
+        setPhoneNumber.sendKeys(phoneNumber);
+    }
+    public void clickSaveButtonAddress(){
+        saveButtonAddress.click();
     }
 }

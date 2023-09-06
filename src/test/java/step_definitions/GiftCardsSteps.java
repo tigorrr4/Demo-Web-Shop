@@ -3,6 +3,7 @@ package step_definitions;
 import PageObject.BooksPage;
 import PageObject.GiftCardsPage;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
 
@@ -23,7 +24,7 @@ public class GiftCardsSteps {
     }
 
     @And("User add ${int} Physical Gift Card to cart")
-    public void userAdd$PhysicalGiftCardToCart(int arg0) {
+    public void userAdd$PhysicalGiftCardToCart(int arg0) throws InterruptedException {
         GiftCardsPage GiftCardPage = new GiftCardsPage(webDriver);
         GiftCardPage.clickGiftCardsButton();
         webDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);

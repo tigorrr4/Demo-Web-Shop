@@ -95,4 +95,39 @@ public class MyAccountSteps {
         MyAccountPage.clickChangePsdButton();
         webDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
     }
+
+    @And("User click edit")
+    public void userClickEdit() {
+        MyAccountPage MyAccountPage = new MyAccountPage(webDriver);
+        MyAccountPage.clickEditAddressesButton();
+        webDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+    }
+
+    @And("User click Addresses")
+    public void userClickAddresses() {
+        MyAccountPage MyAccountPage = new MyAccountPage(webDriver);
+        MyAccountPage.clickAddressesButton();
+        webDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+    }
+
+    @And("User input {string} as first name, input {string} as last name, input {string} as email, input {string} as company, input {string} as city, input {string} as address, input {string} as zip code, and input {string} as phone number")
+    public void userInputAsFirstNameInputAsLastNameInputAsEmailInputAsCompanyInputAsCityInputAsAddressInputAsZipCodeAndInputAsPhoneNumber(String FirstName, String LastName, String Email, String company, String city, String Addresses, String zipCode, String phoneNumber) throws InterruptedException {
+        MyAccountPage MyAccountPage = new MyAccountPage(webDriver);
+        MyAccountPage.setAddressesFieldFirstname(FirstName);
+        MyAccountPage.setAddressesFieldLastname(LastName);
+        MyAccountPage.setAddressesEmail(Email);
+        MyAccountPage.setAddressesCompany(company);
+        MyAccountPage.setAddressesCity(city);
+        MyAccountPage.setAddresses(Addresses);
+        MyAccountPage.setZipCodes(zipCode);
+        MyAccountPage.setPhoneNumber(phoneNumber);
+        webDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+    }
+
+    @When("User click save Button")
+    public void userrClickSaveButton() {
+        MyAccountPage MyAccountPage = new MyAccountPage(webDriver);
+        MyAccountPage.clickSaveButtonAddress();
+        webDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+    }
 }
