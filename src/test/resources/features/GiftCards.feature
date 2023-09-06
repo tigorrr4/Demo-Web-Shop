@@ -1,7 +1,7 @@
 Feature: Gift Cards
 
   @GiftCards @PositiveCase
-  Scenario: User want to add $100 Physical Gift Card to cart
+  Scenario: User want to add $100 Physical Gift Cards to cart
     Given   User already login
     When    User click gift cards on menu
     And     User sort by "Created on"
