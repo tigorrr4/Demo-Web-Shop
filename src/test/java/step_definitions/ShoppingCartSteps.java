@@ -150,4 +150,45 @@ public class ShoppingCartSteps {
         Assert.assertTrue(ShoppingCartPage.verifyConfirmOrder());
         webDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
     }
+
+
+    @And("User click shipping method next day")
+    public void userClickShippingMethodNextDay() {
+        ShoppingCartPage ShoppingCartPage = new ShoppingCartPage(webDriver);
+        ShoppingCartPage.clickShippingMethodNextDayButton();
+        webDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+    }
+
+    @And("User click payment method using check")
+    public void userClickPaymentMethodUsingCheck() {
+        ShoppingCartPage ShoppingCartPage = new ShoppingCartPage(webDriver);
+        ShoppingCartPage.clickPaymentMethodCheckButton();
+        webDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+    }
+
+    @And("User click shipping method {int}nd next day")
+    public void userClickShippingMethodNdNextDay(int arg0) {
+        ShoppingCartPage ShoppingCartPage = new ShoppingCartPage(webDriver);
+        ShoppingCartPage.clickShippingMethod2ndNextDayButton();
+        webDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+    }
+
+    @And("User click payment method using credit")
+    public void userClickPaymentMethodUsingCredit() {
+        ShoppingCartPage ShoppingCartPage = new ShoppingCartPage(webDriver);
+        ShoppingCartPage.clickPaymentMethodCreditButton();
+        webDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+    }
+
+    @And("User select {string} as credit card and input {string} as cardholder name, and input {string} as card number and select {string} as exp month, and select {string} as exp year, and input {string} as card code")
+    public void userSelectAsCreditCardAndInputAsCardholderNameAndInputAsCardNumberAndSelectAsExpMonthAndSelectAsExpYearAndInputAsCardCode(String CreditCard, String HolderName, String number, String Month, String Years, String code) throws InterruptedException {
+        ShoppingCartPage ShoppingCartPage = new ShoppingCartPage(webDriver);
+        ShoppingCartPage.setselectCreditCard(CreditCard);
+        ShoppingCartPage.setCardHolderName(HolderName);
+        ShoppingCartPage.setCardNumber(number);
+        ShoppingCartPage.setExpMonth(Month);
+        ShoppingCartPage.setExpYears(Years);
+        ShoppingCartPage.setCardCode(code);
+        webDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+    }
 }

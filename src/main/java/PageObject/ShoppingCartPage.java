@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
 public class ShoppingCartPage {
     public static WebDriver driver;
@@ -35,7 +36,7 @@ public class ShoppingCartPage {
     private WebElement paymentMethodCODButton;
     @FindBy(xpath = "//input[@class='button-1 payment-method-next-step-button']")
     private WebElement continueButtonInPaymentMethod;
-    @FindBy(xpath = "//td[contains(.,'You will pay by COD')]")
+    @FindBy(xpath = "//h2[.='Payment information']")
     private static WebElement verifyPaymentInformation;
     @FindBy(xpath = "//input[@class='button-1 payment-info-next-step-button']")
     private WebElement continueButtonInPaymentInformation;
@@ -43,6 +44,26 @@ public class ShoppingCartPage {
     private static WebElement verifyConfirmOrder;
     @FindBy(xpath = "//input[@class='button-1 confirm-order-next-step-button']")
     private WebElement continueButtonInConfirmOrder;
+    @FindBy(xpath = "//input[@value='Next Day Air___Shipping.FixedRate']")
+    private WebElement shippingMethodNextDayButton;
+    @FindBy(xpath = "//input[@value='Payments.CheckMoneyOrder']")
+    private WebElement paymentMethodCheckButton;
+    @FindBy(xpath = "//input[@value='Next Day Air___Shipping.FixedRate']")
+    private WebElement shippingMethod2ndNextDayButton;
+    @FindBy(xpath = "//input[@value='Payments.Manual']")
+    private WebElement paymentMethodCreditButton;
+    @FindBy(xpath = "//select[@id='CreditCardType']")
+    private WebElement selectCreditCard;
+    @FindBy(xpath = "//input[@id='CardholderName']")
+    private WebElement cardHolderName;
+    @FindBy(xpath = "//input[@id='CardNumber']")
+    private WebElement cardNumber;
+    @FindBy(xpath = "//select[@id='ExpireMonth']")
+    private WebElement expMonth;
+    @FindBy(xpath = "//select[@id='ExpireYear']")
+    private WebElement expYears;
+    @FindBy(xpath = "//input[@id='CardCode']")
+    private WebElement cardCode;
 
     public void clickShoppingCartButton(){
         shoppingCartButton.click();
@@ -89,5 +110,42 @@ public class ShoppingCartPage {
     public void clickContinueButtonInConfirmOrder(){
         continueButtonInConfirmOrder.click();
     }
+    public void clickShippingMethodNextDayButton(){
+        shippingMethodNextDayButton.click();
+    }
+    public void clickPaymentMethodCheckButton(){
+        paymentMethodCheckButton.click();
+    }
+    public void clickShippingMethod2ndNextDayButton(){
+        shippingMethod2ndNextDayButton.click();
+    }
+    public void clickPaymentMethodCreditButton(){
+        paymentMethodCreditButton.click();
+    }
+    public void setExpMonth(String Month){
+        Select a = new Select(expMonth);
+        expMonth.click();
+        a.selectByVisibleText(Month);
+    }
+    public void setCardHolderName(String HolderName) {
+        cardHolderName.sendKeys(HolderName);
+    }
+    public void setCardNumber(String number) {
+        cardNumber.sendKeys(number);
+    }
+    public void setCardCode(String code) {
+        cardCode.sendKeys(code);
+    }
+    public void setselectCreditCard(String CreditCard){
+        Select a = new Select(selectCreditCard);
+        selectCreditCard.click();
+        a.selectByVisibleText(CreditCard);
+    }
+    public void setExpYears(String Years){
+        Select a = new Select(expYears);
+        expYears.click();
+        a.selectByVisibleText(Years);
+    }
+
 
 }
