@@ -12,7 +12,7 @@
 
 
 ## 📓 Testing Documentation
-[Test Case](https://docs.google.com/spreadsheets/d/1ltUOgSY3iZRbdzCPh6dDNew98Kjd_gqVlpgnl1WTtAA/edit#gid=0)
+[Documentation](https://drive.google.com/drive/folders/1A5CFqKP7XcobacXj5oeNVcU0BT6xMQcY?usp=sharing)
 
 ## 📝 Reports
 
