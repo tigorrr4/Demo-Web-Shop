@@ -7,7 +7,7 @@
 
 ## 📑 About the Project
 
-<p align="justify">This practice.</p>
+<p align="justify">This is a web automation exercise where I am using a demo web shop.</p>
 
 
 
