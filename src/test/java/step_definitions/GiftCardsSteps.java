@@ -44,4 +44,18 @@ public class GiftCardsSteps {
         webDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 
     }
+
+    @And("User add ${int} Physicall Gift Card to cart")
+    public void userAdd$PhysicallGiftCardToCart(int arg0) {
+        GiftCardsPage GiftCardPage = new GiftCardsPage(webDriver);
+        GiftCardPage.clickGift50CardsButton();
+        webDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+    }
+
+    @And("User addd ${int} Physical Gift Card to cart")
+    public void userAddd$PhysicalGiftCardToCart(int arg0) {
+        GiftCardsPage GiftCardPage = new GiftCardsPage(webDriver);
+        GiftCardPage.clickGift25CardsButton();
+        webDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+    }
 }

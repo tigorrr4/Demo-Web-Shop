@@ -15,6 +15,10 @@ public class GiftCardsPage {
     private WebElement cardsButton;
     @FindBy(xpath = "//div[@class='product-grid']/div[1]//input[@class='button-2 product-box-add-to-cart-button']")
     private WebElement giftCardsButton;
+    @FindBy(xpath = "//div[@class='product-grid']/div[2]//input[@class='button-2 product-box-add-to-cart-button']")
+    private WebElement giftCards50Button;
+    @FindBy(xpath = "//div[@class='product-grid']/div[3]//input[@class='button-2 product-box-add-to-cart-button']")
+    private WebElement giftCards25Button;
     @FindBy(xpath = "//input[@class='recipient-name']")
     private WebElement recipientNameField;
     @FindBy(xpath = "//input[@class='button-1 add-to-cart-button']")
@@ -31,5 +35,11 @@ public class GiftCardsPage {
     }
     public void recipientNameField(String recipient) {
         recipientNameField.sendKeys(recipient);
+    }
+    public void clickGift50CardsButton(){
+        giftCards50Button.click();
+    }
+    public void clickGift25CardsButton(){
+        giftCards25Button.click();
     }
 }

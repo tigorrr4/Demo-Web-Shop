@@ -17,6 +17,8 @@ public class ElectronicPage {
     private WebElement phoneButton;
     @FindBy(xpath = "//div[@class='product-grid']//div[3]//input[@class='button-2 product-box-add-to-cart-button']")
     private WebElement phoneAddToCartButton;
+    @FindBy(xpath = "//div[@class='product-grid']//div[2]//input[@class='button-2 product-box-add-to-cart-button']")
+    private WebElement phoneCoverAddToCartButton;
     public void clickElectronicsButton(){
         electronicsButton.click();
     }
@@ -25,5 +27,8 @@ public class ElectronicPage {
     }
     public void clickPhoneAddToCartButton(){
         phoneAddToCartButton.click();
+    }
+    public void clickPhoneCoverAddToCartButton(){
+        phoneCoverAddToCartButton.click();
     }
 }

@@ -29,4 +29,20 @@ public class DigitalDownloadsStep {
         digitalDownloadsPage.clickAlbumButton();
         webDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
     }
+
+    @And("User add music {int} to cart")
+    public void userAddMusicToCart(int arg0) {
+        DigitalDownloadsPage digitalDownloadsPage = new DigitalDownloadsPage(webDriver);
+        digitalDownloadsPage.clickMusic2Button();
+        webDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+    }
+
+    @And("User add music {int} with ${int} price to cart")
+    public void userAddMusicWith$PriceToCart(int arg0, int arg1) {
+        DigitalDownloadsPage digitalDownloadsPage = new DigitalDownloadsPage(webDriver);
+        digitalDownloadsPage.clickMusic3Button();
+        webDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+    }
+
+
 }

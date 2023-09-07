@@ -86,4 +86,18 @@ public class BooksSteps {
         BooksPage BooksPage = new BooksPage(webDriver);
         webDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
     }
+
+    @And("User add Health Book to cart")
+    public void userAddHealthBookToCart() {
+        BooksPage BooksPage = new BooksPage(webDriver);
+        BooksPage.clickAddToCartBooks2Button();
+        webDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+    }
+
+    @And("User add Computing and Internet to cart")
+    public void userAddComputingAndInternetToCart() {
+        BooksPage BooksPage = new BooksPage(webDriver);
+        BooksPage.clickAddToCartBooks3Button();
+        webDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+    }
 }

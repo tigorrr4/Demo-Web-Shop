@@ -1,6 +1,6 @@
 Feature: My Account
 
-  @MyAccount @PositiveCase
+  @MyAccount @PositiveCase @Practice
   Scenario: User want to edit their info
     Given   User already login
     When    User click their email at menu page
@@ -10,8 +10,8 @@ Feature: My Account
     When    User click save button
     Then    User account will update
 
-    @MyAccount @PositiveCase
-  Scenario: User want to edit their info
+    @MyAccount @PositiveCase @Practice
+  Scenario: User want to edit their password
     Given   User already login
     When    User click their email at menu page
     And     User click change password
@@ -21,8 +21,8 @@ Feature: My Account
     When    User click change password button
     Then    User account will update
 
-  @MyAccount @PositiveCase
-  Scenario: User want to update their password
+  @MyAccount @PositiveCase @Practice
+  Scenario: User want to update their profile
     Given   User already login
     When    User click their email at menu page
     And     User click edit

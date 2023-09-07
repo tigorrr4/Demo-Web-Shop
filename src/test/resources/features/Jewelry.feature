@@ -1,7 +1,7 @@
 Feature: Jewelry
 
-  @Jewelry @PositiveCase
-  Scenario: User want to add book to cart
+  @Jewelry @PositiveCase @Practice
+  Scenario: User want to add Black & White Diamond Heart
     Given   User already login
     When    User click jewelry on menu
     And     User sort by "Created on"
@@ -9,5 +9,8 @@ Feature: Jewelry
     And     User click filter by price under "0-500"
     And     User add Black & White Diamond Heart to cart
     Then    User will see message The product has been added to your shopping cart
+
+
+
 
 

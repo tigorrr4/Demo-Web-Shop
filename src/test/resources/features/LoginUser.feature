@@ -1,6 +1,6 @@
 Feature: Login User
 
-  @Login @PositiveCase
+  @Login @PositiveCase @Practice
   Scenario: User login with valid data
     Given   User already on demo web shop website
     When    User click log in menu
@@ -8,7 +8,7 @@ Feature: Login User
     And     User click login button
     Then    User wil see their email on the page
 
-  @Login @NegativeCase
+  @Login @NegativeCase @Practice
   Scenario: User login with invalid data
     Given   User already on demo web shop website
     When    User click log in menu
@@ -16,7 +16,7 @@ Feature: Login User
     And     User click login button
     Then    User wil see error message Please enter a valid email address
 
-  @Login @NegativeCase
+  @Login @NegativeCase @Practice
   Scenario: User login with invalid data using unregistered account
     Given   User already on demo web shop website
     When    User click log in menu
@@ -24,7 +24,7 @@ Feature: Login User
     And     User click login button
     Then    User wil see error message Login was unsuccessful Please correct the errors and try again
 
-  @Login @NegativeCase
+  @Login @NegativeCase @Practice
   Scenario: User login with empty email
     Given   User already on demo web shop website
     When    User click log in menu
@@ -32,7 +32,7 @@ Feature: Login User
     And     User click login button
     Then    User wil see error message Login was unsuccessful Please correct the errors and try again
 
-  @Login @NegativeCase
+  @Login @NegativeCase @Practice
   Scenario: User login with empty password
     Given   User already on demo web shop website
     When    User click log in menu
@@ -40,7 +40,7 @@ Feature: Login User
     And     User click login button
     Then    User wil see error message Login was unsuccessful Please correct the errors and try again
 
-  @Login @NegativeCase
+  @Login @NegativeCase @Practice
   Scenario: User login with empty email and empty password
     Given   User already on demo web shop website
     When    User click log in menu
@@ -48,7 +48,7 @@ Feature: Login User
     And     User click login button
     Then    User wil see error message Login was unsuccessful Please correct the errors and try again
 
-  @Login @PositiveCase
+  @Login @PositiveCase @Practice
   Scenario: User login with valid data and click remember me
     Given   User already on demo web shop website
     When    User click log in menu

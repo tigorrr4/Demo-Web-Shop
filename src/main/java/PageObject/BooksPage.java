@@ -23,6 +23,10 @@ public class BooksPage {
     private WebElement filterByPrice;
     @FindBy(xpath = "//div[@class='product-grid']/div[3]//input[@class='button-2 product-box-add-to-cart-button']")
     private WebElement addToCartBooksButton;
+    @FindBy(xpath = "//div[4]//input[@class='button-2 product-box-add-to-cart-button']")
+    private WebElement addToCartBooks2Button;
+    @FindBy(xpath = "//div[5]//input[@class='button-2 product-box-add-to-cart-button']")
+    private WebElement addToCartBooks3Button;
     @FindBy(xpath = "//p[@class='content']")
     private static WebElement verifyCart;
 
@@ -48,6 +52,12 @@ public class BooksPage {
     }
     public static boolean verifyCart(){
         return verifyCart.isDisplayed();
+    }
+    public void clickAddToCartBooks2Button(){
+        addToCartBooks2Button.click();
+    }
+    public void clickAddToCartBooks3Button(){
+        addToCartBooks3Button.click();
     }
 
 

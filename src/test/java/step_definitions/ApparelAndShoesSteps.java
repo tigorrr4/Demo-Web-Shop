@@ -44,4 +44,39 @@ public class ApparelAndShoesSteps {
         ApparelAndShoesPage.clickShoesButton();
         webDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
     }
+
+    @And("User add Blue and green Sneaker to cart")
+    public void userAddBlueAndGreenSneakerToCart() {
+        ApparelAndShoesPage ApparelAndShoesPage  = new ApparelAndShoesPage(webDriver);
+        ApparelAndShoesPage.clickGreenSneakerButton();
+        webDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+    }
+
+    @And("User add {int}'s Rockabilly Polka Dot Top JR Plus Size to cart")
+    public void userAddSRockabillyPolkaDotTopJRPlusSizeToCart(int arg0) {
+        ApparelAndShoesPage ApparelAndShoesPage  = new ApparelAndShoesPage(webDriver);
+        ApparelAndShoesPage.clickPolkadotShirtButton();
+        webDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+    }
+
+    @And("User click add to cart in {int}'s Rockabilly Polka Dot Top JR Plus Size page")
+    public void userClickAddToCartInSRockabillyPolkaDotTopJRPlusSizePage(int arg0) {
+        ApparelAndShoesPage ApparelAndShoesPage  = new ApparelAndShoesPage(webDriver);
+        ApparelAndShoesPage.clickAddCartInAp();
+        webDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+    }
+
+    @When("User choose green colour")
+    public void userChooseGreenColour() {
+        ApparelAndShoesPage ApparelAndShoesPage  = new ApparelAndShoesPage(webDriver);
+        ApparelAndShoesPage.clickGreenColour();
+        webDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+    }
+
+    @And("User click add to cart in Blue and green Sneaker page")
+    public void userClickAddToCartInBlueAndGreenSneakerPage() {
+        ApparelAndShoesPage ApparelAndShoesPage  = new ApparelAndShoesPage(webDriver);
+        ApparelAndShoesPage.clickAddCartInShoes();
+        webDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+    }
 }

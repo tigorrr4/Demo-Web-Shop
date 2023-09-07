@@ -36,4 +36,11 @@ public class ElectronicsSteps {
         electronicPage.clickPhoneAddToCartButton();
         webDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
     }
+
+    @And("User add phone cover to cart")
+    public void userAddPhoneCoverToCart() {
+        ElectronicPage electronicPage = new ElectronicPage(webDriver);
+        electronicPage.clickPhoneAddToCartButton();
+        webDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+    }
 }

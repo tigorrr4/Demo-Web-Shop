@@ -1,6 +1,6 @@
 Feature: Computers
 
-  @Computers @PositiveCase
+  @Computers @PositiveCase @Practice
   Scenario: User want to add laptop to cart
     Given   User already login
     When    User click Electronics on menu
@@ -10,7 +10,7 @@ Feature: Computers
     And     User add 14 inch Laptop to cart
     Then    User will see message The product has been added to your shopping cart
 
-  @Computers @PositiveCase
+  @Computers @PositiveCase @Practice
   Scenario: User want to add Accessories to cart
     Given   User already login
     When    User click Electronics on menu
@@ -20,7 +20,7 @@ Feature: Computers
     And     User add TCP Self-Paced Training additional month and TCP Instructor Led Training to cart
     Then    User will see message The product has been added to your shopping cart
 
-  @Computers @PositiveCase
+  @Computers @PositiveCase @Practice
   Scenario: User want to add Desktops to cart
     Given   User already login
     When    User click Electronics on menu

@@ -1,6 +1,6 @@
 Feature: Wishlist
 
-  @Wishlist @PositiveCase
+  @Wishlist @PositiveCase @Practice
   Scenario: User want to add item to wishlist
     Given   User already login
     When    User click gift cards on menu
@@ -12,7 +12,7 @@ Feature: Wishlist
     And     User click wishlist button
     Then    User will see their item in wishlist page
 
-  @Wishlist @PositiveCase
+  @Wishlist @PositiveCase @Practice
   Scenario: User want remove their wishlist
     Given   User already login
     When    User click gift cards on menu
@@ -27,8 +27,8 @@ Feature: Wishlist
     And     User click update wishlist
     And     User will see their item got remove
 
-  @Wishlist @PositiveCase
-  Scenario: User want remove their wishlist
+  @Wishlist @PositiveCase @Practice
+  Scenario: User want too add item from wishlist to cart
     Given   User already login
     When    User click gift cards on menu
     And     User sort by "Created on"
@@ -41,8 +41,8 @@ Feature: Wishlist
     And     User click add to cart on item want their add
     And     User click add to cart on wishlist
 
-  @Wishlist @PositiveCase
-  Scenario: User want remove their wishlist
+  @Wishlist @PositiveCase @Practice
+  Scenario: User want send email from wish list
     Given   User already login
     When    User click gift cards on menu
     And     User sort by "Created on"

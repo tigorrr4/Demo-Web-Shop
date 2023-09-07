@@ -15,10 +15,20 @@ public class DigitalDownloadsPage {
     private WebElement digitalDownloadsButton;
     @FindBy(xpath = "//div[@class='product-grid']/div[1]//input[@class='button-2 product-box-add-to-cart-button']")
     private WebElement albumButton;
+    @FindBy(xpath = "//div[@class='product-grid']/div[2]//input[@class='button-2 product-box-add-to-cart-button']")
+    private WebElement music2Button;
+    @FindBy(xpath = "//div[@class='product-grid']/div[3]//input[@class='button-2 product-box-add-to-cart-button']")
+    private WebElement music3Button;
     public void clickDigitalDownloadsButton(){
         digitalDownloadsButton.click();
     }
     public void clickAlbumButton(){
         albumButton.click();
+    }
+    public void clickMusic2Button(){
+        music2Button.click();
+    }
+    public void clickMusic3Button(){
+        music3Button.click();
     }
 }
