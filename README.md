@@ -1,6 +1,7 @@
  <p align="center">
     WEB Automation Testing Demo Web Shop (Practice)
     <br />
+       <a href="https://demowebshop.tricentis.com/"><strong>|Demo Web Shop|</strong></a>
  
 
 
@@ -16,12 +17,13 @@
 ## 📝 Reports
 
 #### Coverage Report
-
+![report-web-cpverage](https://github.com/tigorrr4/Demo-Web-Shop/blob/master/Report/Summary%20WEB.png)
 
 #### Test Documentation Spreadsheet
 
 
 #### Automation Testing When Run in Intellij IDE
+![report-web-runningtest](https://github.com/tigorrr4/Demo-Web-Shop/blob/master/Report/Run%20Intelij.png)
 
 
 
@@ -38,10 +40,6 @@
 **Test Case Management:**  
 
 ![Google Sheets](https://img.shields.io/badge/-Google%20sheets-4bc47b?style=for-the-badge&logoColor=black)
-
-**Project Management:** 
-
-[![Trello](https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white)](https://trello.com/b/x4mtkPka/cookit)
 
 **Communication:**  
 
