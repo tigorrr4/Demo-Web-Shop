@@ -7,7 +7,7 @@
 
 ## 📑 About the Project
 
-<p align="justify">This project was created to practice with the subject of Web Automation Testing. In this practice I make 46 test case and managing test cases, executing web tests with manual and automation steps for specific endpoints.</p>
+<p align="justify">This project was created to practice with the subject of Web Automation Testing. In this practice I make 46 test case with 45 test case passed and 1 test case failed and managing test cases, executing web tests with manual and automation steps for specific endpoints.</p>
 
 
 
