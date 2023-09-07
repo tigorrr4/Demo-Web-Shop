@@ -13,6 +13,8 @@ public class ShoppingCartPage {
     }
     @FindBy(xpath = "//span[.='Shopping cart']")
     private WebElement shoppingCartButton;
+
+
     @FindBy(xpath = "//input[@id='termsofservice']")
     private WebElement checkListCartButton;
     @FindBy(xpath = "//button[@id='checkout']")
