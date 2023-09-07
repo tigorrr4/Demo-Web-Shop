@@ -21,8 +21,6 @@ Feature: My Account
     When    User click change password button
     Then    User account will update
 
-
-
   @MyAccount @PositiveCase
   Scenario: User want to update their password
     Given   User already login
